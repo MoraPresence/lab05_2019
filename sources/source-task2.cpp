@@ -11,7 +11,7 @@ const T &stack<T>::head() const {
 template<typename T>
 template<typename ... Args>
 void stack<T>::push_emplace(Args &&... value) {
-    push(T(value...));
+    push(T(std::move(value...)));
 }
 
 template<typename T>
@@ -33,12 +33,9 @@ T stack<T>::pop() {
 template<typename T>
 void stack<T>::push(T &&value) {
     if(_countStack) {
-        stackOBJ<T> *node = new stackOBJ<T>;
-        node->data = value;
-        node->next_stackOBJ = top;
+        stackOBJ<T> *node = new stackOBJ<T>{std::move(value), top};
         top = node;
         --_countStack;
-		value = NULL;
     }else{
         exit(STACK_OVERFLOW);
     }

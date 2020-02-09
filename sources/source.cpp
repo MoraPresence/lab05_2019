@@ -3,7 +3,6 @@
 #include <header.hpp>
 #include <iostream>
 
-
 template<typename T>
 const T &stack<T>::head() const {
     return top->data;
@@ -13,10 +12,7 @@ const T &stack<T>::head() const {
 template<typename T>
 void stack<T>::push(const T &value) {
     if (_countStack) {
-
-        stackOBJ<T> *node = new stackOBJ<T>;
-        node->data = value;
-        node->next_stackOBJ = top;
+        stackOBJ<T> *node = new stackOBJ<T>{std::move(value), top};
         top = node;
         --_countStack;
     } else {
@@ -41,12 +37,9 @@ void stack<T>::pop() {
 template<typename T>
 void stack<T>::push(T &&value) {
     if (_countStack) {
-        stackOBJ<T> *node = new stackOBJ<T>;
-        node->data = value;
-        node->next_stackOBJ = top;
+        stackOBJ<T> *node = new stackOBJ<T>{std::move(value), top};
         top = node;
         --_countStack;
-		value = NULL;
     } else {
         exit(STACK_OVERFLOW);
     }

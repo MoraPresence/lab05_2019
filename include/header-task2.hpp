@@ -19,13 +19,12 @@ public:
 template<typename T>
 class stack {
 public:
-    stack() {}
-
-    stack(size_t countStack) : _countStack(countStack) {}
+    stack() = default;
+    explicit stack(size_t countStack) : _countStack(countStack) {}
 
     ~stack(){
         while(top){
-            auto tmp = top;
+            auto* tmp = top;
             top = top->next_stackOBJ;
             delete tmp;
         }
