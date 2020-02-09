@@ -4,13 +4,13 @@
 #include <iostream>
 
 template<typename T>
-const T &stack<T>::head() const {
+const T &myStack<T>::head() const {
     return top->data;
 }
 
 
 template<typename T>
-void stack<T>::push(const T &value) {
+void myStack<T>::push(const T &value) {
     if (_countStack) {
         stackOBJ<T> *node = new stackOBJ<T>{std::move(value), top};
         top = node;
@@ -21,7 +21,7 @@ void stack<T>::push(const T &value) {
 }
 
 template<typename T>
-void stack<T>::pop() {
+void myStack<T>::pop() {
     T value;
     if (top) {
         stackOBJ<T> *old = top;
@@ -35,7 +35,7 @@ void stack<T>::pop() {
 
 
 template<typename T>
-void stack<T>::push(T &&value) {
+void myStack<T>::push(T &&value) {
     if (_countStack) {
         stackOBJ<T> *node = new stackOBJ<T>{std::move(value), top};
         top = node;

@@ -17,13 +17,13 @@ public:
 
 
 template <typename T>
-class stack
+class myStack
 {
 public:
-    stack<T> () = default;
-    explicit stack(size_t countStack) : _countStack(countStack) {}
+    myStack<T> () = default;
+    explicit myStack(size_t countStack) : _countStack(countStack) {}
 
-    ~stack(){
+    ~myStack(){
         while (top){
             auto* tmp = top;
             top = top->next_stackOBJ;
