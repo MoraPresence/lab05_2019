@@ -24,7 +24,7 @@ public:
     explicit stack(size_t countStack) : _countStack(countStack) {}
 
     ~stack(){
-        while(top){
+        while (top){
             auto* tmp = top;
             top = top->next_stackOBJ;
             delete tmp;

@@ -32,7 +32,7 @@ T stack<T>::pop() {
 
 template<typename T>
 void stack<T>::push(T &&value) {
-    if(_countStack) {
+    if (_countStack) {
         stackOBJ<T> *node = new stackOBJ<T>{std::move(value), top};
         top = node;
         --_countStack;
