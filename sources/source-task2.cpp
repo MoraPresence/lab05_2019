@@ -38,7 +38,7 @@ void stack<T>::push(T &&value) {
         node->next_stackOBJ = top;
         top = node;
         --_countStack;
-		delete value;
+		value = NULL;
     }else{
         exit(STACK_OVERFLOW);
     }
