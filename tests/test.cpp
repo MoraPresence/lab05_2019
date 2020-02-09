@@ -12,7 +12,7 @@ TEST(myStack, test_1){
     EXPECT_EQ(s.head(), 10);
 }
 
-TEST(myStack,test_2 ){
+TEST(myStack, test_2 ){
     myStack<int> s{};
 
     s.push(3);
@@ -46,18 +46,17 @@ TEST(myStack, test_4)
 }
 
 TEST(Stack, test_5){
-		class A{
-	public:
-	A(int a, int b) {
-		c = a + b;
-	}
-		int c;
-	};
-	
+        class A{
+    public:
+    A(int a, int b) {
+        c = a + b;
+    }
+        int c;
+    };
     stack<A> s{};
 
-    s.push_emplace(4,6,2);
-	auto a = s.head;
+    s.push_emplace(4, 6, 2);
+    auto a = s.head;
     EXPECT_EQ(a.c, 12);
 }
 
