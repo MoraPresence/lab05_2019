@@ -1,7 +1,7 @@
 // Copyright 2018 Your Name <your_email>
 
-#ifndef INCLUDE_HEADER-TASK2_HPP_
-#define INCLUDE_HEADER-TASK2_HPP_
+#ifndef INCLUDE_HEADER_TASK2_HPP_
+#define INCLUDE_HEADER_TASK2_HPP_
 #include <cstdio>
 
 #define STACK_OVERFLOW  -100
@@ -43,4 +43,4 @@ private:
     stackOBJ<T> *top = NULL;
     size_t _countStack = 10;
 };
-#endif // INCLUDE_HEADER-TASK2_HPP_
+#endif // INCLUDE_HEADER_TASK2_HPP_
