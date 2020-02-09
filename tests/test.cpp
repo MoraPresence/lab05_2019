@@ -38,9 +38,9 @@ TEST(myStack, test_4)
 {
     myStack<int> s{};
 
-    my_stack.push(6);
-    my_stack.push(9);
-    my_stack.pop();
+    s.push(6);
+    s.push(9);
+    s.pop();
 
     EXPECT_EQ(s.head(), 6);
 }
@@ -63,9 +63,9 @@ TEST(Stack, test_5){
 TEST(Stack, test_6){
     stack<int> s{};
 
-    my_stack.push(6);
-    my_stack.push(9);
-    my_stack.pop();
+    s.push(6);
+    s.push(9);
+    s.pop();
 
     EXPECT_EQ(s.head(), 6);
 }
