@@ -69,7 +69,7 @@ void myStack<T>::pop() {
     } else {
         exit(STACK_UNDERFLOW);
     }
-	//return value;
+     //return value;
 }
 
 
