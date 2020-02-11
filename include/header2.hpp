@@ -1,7 +1,7 @@
 // Copyright 2018 Your Name <your_email>
 
-#ifndef INCLUDE_HEADER_TASK2_HPP_
-#define INCLUDE_HEADER_TASK2_HPP_
+#ifndef INCLUDE_HEADER2_HPP_
+#define INCLUDE_HEADER2_HPP_
 #include <cstdio>
 #include <iostream>
 
@@ -82,4 +82,4 @@ void myStack<T>::push(T &&value) {
         exit(STACK_OVERFLOW);
     }
 }
-#endif // INCLUDE_HEADER_TASK2_HPP_
+#endif // INCLUDE_HEADER2_HPP_

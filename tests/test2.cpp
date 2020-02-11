@@ -1,7 +1,7 @@
 // Copyright 2018 Your Name <your_email>
 
 #include <gtest/gtest.h>
-#include <header-task2.hpp>
+#include <header2.hpp>
 
 TEST(Stack, test_5){
         class A{
