@@ -15,6 +15,8 @@ TEST(Stack, test_5){
 
     s.push_emplace(4, 6, 2);
     auto a = s.head;
+	EXPECT_EQ(std::is_move_constructible<myStack<int>>::value, true);
+    EXPECT_EQ(std::is_move_assignable<myStack<int>>::value, true);
     EXPECT_EQ(a.c, 12);
 }
 
@@ -25,5 +27,7 @@ TEST(Stack, test_6){
     s.push(9);
     s.pop();
 
+    EXPECT_EQ(std::is_move_constructible<myStack<int>>::value, true);
+    EXPECT_EQ(std::is_move_assignable<myStack<int>>::value, true);
     EXPECT_EQ(s.head(), 6);
 }
