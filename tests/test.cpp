@@ -17,7 +17,7 @@ TEST(myStack, test_2 ){
     s.push(3);
     s.push(12);
     s.push(45);
-
+	EXPECT_EQ(std::is_move_constructible<myStack<int>>::value, true);
     EXPECT_EQ(s.head(), 45);
 }
 
