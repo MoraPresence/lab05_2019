@@ -60,15 +60,16 @@ void myStack<T>::push(const T &value) {
 
 template<typename T>
 void myStack<T>::pop() {
-    T value;
+   // T value;
     if (top) {
         stackOBJ<T> *old = top;
         top = top->next_stackOBJ;
-        value = old->data;
+      //  value = old->data;
         delete old;
     } else {
         exit(STACK_UNDERFLOW);
     }
+	//return value;
 }
 
 
